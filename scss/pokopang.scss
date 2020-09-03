@@ -1,3 +1,9 @@
 body::-webkit-scrollbar {
   background: none;
 }
+
+/*
+audio, embed {
+  position: absolute;
+  z-index: -9999;
+}*/
