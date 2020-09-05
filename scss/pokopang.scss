@@ -1,9 +1,22 @@
+@import "responsive";
+
 body::-webkit-scrollbar {
   background: none;
 }
 
-/*
-audio, embed {
+.modal-backdrop {
+  display: none;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.positioncenter {
+  margin: 0;
   position: absolute;
-  z-index: -9999;
-}*/
+  left: 38%;
+  @media #{$mobile_device} {
+    left: 20%;
+  }
+}

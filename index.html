@@ -32,13 +32,9 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pokopang.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
     <!-- slider_area -->
     <div class="slider_area" style="margin-top: 5%">
@@ -283,6 +279,7 @@
                         Kec. Pataruman  <br>
                         Kota. Banjar
             </div>
+            <a href="https://goo.gl/maps/jzeGNATQmfUU9vZu5" target="_blank" class="genric-btn info circle arrow positioncenter">Open Map<span class="lnr lnr-arrow-right"></span></a>
         </div>
     </div>
     <div class="container-fluid p-0">
@@ -292,36 +289,64 @@
     </div>
 </section>
 <!-- ================ contact section end ================= -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!--<button id="on" onclick="play()" style="width: 50px; height: 50px">
-        <iframe src="music/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio id="mus" src="music/stuckwithyou.mp3" type="audio/mpeg"></audio>-->
 
 
-    <script type="text/javascript">
-        /*var music = document.getElementById('mus');
-        function play() {
-            music.play();
-        }*/
-        var audio = new Audio();
-        audio.src = 'music/stuckwithyou.mp3';
-        audio.controls = true;
-        audio.autoplay = true;
-        document.body.appendChild(audio);
 
-        var context = new AudioContext();
-        var analyser = context.createAnalyser();
+    <audio id="mus" src="music/guitar.mp3" loop>music</audio>
 
-        window.addEventListener('load', function(e) {
-            // Our <audio> element will be the audio source.
-            var source = context.createMediaElementSource(audio);
-            source.connect(analyser);
-            analyser.connect(context.destination);
+        <!-- Modal -->
+        <!--<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                    <div class="slider_area_inner slider_bg_1 overlay2">
+                        <div class="slider_text text-center">
+                            <div class="text_inner">
+                                <img src="img/banner/ornaments.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+&lt;!&ndash;                <img src="img/at-station.jpeg" style="width: 400px; height: 264px;">&ndash;&gt;
+            </div>
+        </div>-->
 
 
-        }, false);
-    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    /*$(window).on('load', function (){
+        console.log('cek');
+        $('#play').click(function (){
+            console.log('cek2');
+            $('#ums').get(0).play();
+        });
+    });*/
+
+    /*function test(){
+        document.getElementById('mus').play();
+    }
+
+    window.onload = function() {
+        document.getElementById('play').click();
+    }*/
+
+
+
+    /*$(window).on('load',function(){
+        $('#myModal').modal();
+    });
+
+    $('#myModal').on('hide.bs.modal', function () {
+        $('#mus').get(0).play();
+    })
+
+    $(document).ready(function () {
+        $('#music-button').click(function () {
+            $('#mus').get(0).play();
+        });
+    });*/
+</script>
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -353,6 +378,8 @@
 
     <script src="js/main.js"></script>
 
+
+
     <script>
         $('#clock').countdown('2020/09/13', function (event) {
             $(this).html(event.strftime(
@@ -363,8 +390,8 @@
     <script>
         function initMap() {
             var uluru = {
-                lat: -6.163879,
-                lng: 106.796316
+                lat: -7.373081,
+                lng: 108.584909
             };
             var grayStyles = [{
                     featureType: "all",
@@ -385,7 +412,7 @@
             ];
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: uluru,
-                zoom: 13,
+                zoom: 16,
                 styles: grayStyles,
                 scrollwheel: false
             });
